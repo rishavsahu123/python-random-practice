@@ -22,7 +22,7 @@ arrayObj = array('I',[10,20,30,40,50])
 
 class Array(object):
 	def __init__(self):
-		self.arrayObj = array('I',[10,20,30,40,50])
+		self.arrayObj = array('i',[10,20,30,40,50])
 		print("Your dummy array is:\n")
 		for i in self.arrayObj:
 			print(i);
@@ -53,7 +53,20 @@ class Array(object):
 			insert(eventValue);
 
 	def insert(self, val, insertPosition):
-		#i want to add for loop one more time
-		print(val)
+		count = 0
+		insertFlag = False
+		iterationArray = []
+
+		while(len(self.arrayObj)+1>=count):
+			if(insertPosition == count and not insertFlag):
+				iterationArray.append(val);
+				insertFlag = True;
+			elif(insertFlag):
+				iterationArray.append(self.arrayObj) = self.arrayObj[count-1]
+			else:
+				iterationArray[count] = self.arrayObj[count]
+			count+=1
+		for i in iterationArray:
+			print(i);
 
 Array()
