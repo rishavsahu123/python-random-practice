@@ -42,8 +42,8 @@ class Array(object):
 			insertPosition = int(raw_input("Enter insert position"))
 			self.insert(eventValue, insertPosition);
 		elif(input == "3"):
-			eventValue = raw_input("Enter value for delete")
-			insert(eventValue);
+			eventValue = int(raw_input("Enter value for delete"))
+			self.delete(eventValue);
 		elif(input == "4"):
 			eventValue = raw_input("Enter value for search")
 			insert(eventValue);
@@ -56,17 +56,20 @@ class Array(object):
 		count = 0
 		insertFlag = False
 		iterationArray = []
-
-		while(len(self.arrayObj)+1>=count):
+		import pdb;pdb.set_trace()
+		while(len(self.arrayObj)>=count):
 			if(insertPosition == count and not insertFlag):
 				iterationArray.append(val);
 				insertFlag = True;
 			elif(insertFlag):
-				iterationArray.append(self.arrayObj) = self.arrayObj[count-1]
+				iterationArray.append(self.arrayObj[count-1])
 			else:
-				iterationArray[count] = self.arrayObj[count]
+				iterationArray.append(self.arrayObj[count])
 			count+=1
-		for i in iterationArray:
-			print(i);
 
-Array()
+	def delete(self, val):
+		iterationArray = []
+		
+
+
+Array();
